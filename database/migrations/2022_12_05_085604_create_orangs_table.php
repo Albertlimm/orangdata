@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('nohp');
-            $table->string('otp');
+            $table->string('otp')->nullable();
             $table->string('email2');
             $table->timestamps();
         });
