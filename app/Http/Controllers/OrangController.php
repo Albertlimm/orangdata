@@ -87,10 +87,9 @@ class OrangController extends Controller
     {
         $orang->delete();
         return response()->json([
-            'message' => 'orang deleted'
-        ],204);
+            'message' => 'DATA HAS BEEN DELETED'
+        ],200);
     }
 }
-
 
 
