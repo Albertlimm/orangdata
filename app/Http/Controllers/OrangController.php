@@ -62,15 +62,17 @@ class OrangController extends Controller
      * @param  \App\Models\Orang  $orang
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Orang $orang)
+    public function update(Request $request,$id)
     {
+     
+        $orang=Orang::findOrFail($id);
         $orang->name=$request->name;
         $orang->email=$request->orang;
         $orang->password=$request->password;
         $orang->nohp=$request->nohp;
         $orang->otp=$request->otp;
         $orang->email2=$request->email2;
-        $orang->save();
+        $orang->update();
 
         return response()->json([
             'data' =>$orang 
